@@ -37,20 +37,30 @@ function updateCard(index) {
 }
 
 left.addEventListener("click", () => {
-  current = (current - 1 + cards.length) % cards.length;
+  current--;
+
+  if (current < 0) {
+    current = cards.length - 1;
+  }
+
   updateCard(current);
 });
 
 right.addEventListener("click", () => {
-  current = (current + 1) % cards.length;
+  current++;
+
+  if (current >= cards.length) {
+    current = 0;
+  }
+
   updateCard(current);
 });
 
 surpriseBtn.addEventListener("click", () => {
-  let random;
-  do {
-    random = Math.floor(Math.random() * cards.length);
-  } while (random === current);
+  let random = Math.floor(Math.random() * cards.length);
+  if (random === current) {
+    random = (random + 1) % cards.length;
+  }
   current = random;
   updateCard(current);
 });
