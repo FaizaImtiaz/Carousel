@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+div {
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+button {
+  padding: 1%;
+  cursor: pointer;
+}
+span {
+  cursor: pointer;
+  font-size: xx-large;
+}
+#left:hover {
+  color: rgb(218, 77, 77);
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+#right:hover {
+  color: rgb(218, 77, 77);
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
